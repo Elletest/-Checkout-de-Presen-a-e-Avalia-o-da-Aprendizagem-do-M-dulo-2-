@@ -1,0 +1,59 @@
+/* ════════════════════════════════
+   cadastro.css — Página de Cadastro
+   ════════════════════════════════ */
+
+.ec-cadastro-wrapper { padding: 3rem 0 5rem; }
+
+.ec-cadastro-card {
+  background: var(--ec-white);
+  border: 0.5px solid var(--ec-border);
+  border-radius: var(--ec-radius);
+  padding: 2.5rem;
+}
+
+.ec-cadastro-header {
+  padding-bottom: 1.5rem;
+  border-bottom: 0.5px solid var(--ec-border);
+  margin-bottom: 2rem;
+}
+.ec-cadastro-header h1 {
+  font-family: 'Sora', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--ec-text);
+  margin-bottom: .4rem;
+}
+.ec-cadastro-header p {
+  font-size: 14px;
+  color: var(--ec-muted);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Campos */
+.form-control, .form-select {
+  border-color: var(--ec-border);
+  background: var(--ec-bg);
+  font-size: 14px;
+  border-radius: var(--ec-radius-sm, 8px);
+  padding: 10px 14px;
+}
+.form-control:focus, .form-select:focus {
+  border-color: var(--ec-green-main);
+  box-shadow: 0 0 0 3px rgba(45,125,70,.12);
+  background: var(--ec-white);
+}
+.form-label { font-size: 13px; font-weight: 500; }
+.form-text  { font-size: 11px; }
+
+/* Sucesso no submit */
+.alert-success-ec {
+  background: var(--ec-green-light);
+  border: 0.5px solid #b8dfc4;
+  color: var(--ec-green-dark);
+  border-radius: var(--ec-radius);
+}
+
+@media (max-width: 576px) {
+  .ec-cadastro-card { padding: 1.5rem; }
+}

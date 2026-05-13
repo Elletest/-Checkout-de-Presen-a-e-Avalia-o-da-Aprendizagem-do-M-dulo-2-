@@ -1,0 +1,350 @@
+/* ════════════════════════════════════════
+   style.css — EncontreCaap
+   Estilos customizados sobre o Bootstrap 5
+   ════════════════════════════════════════ */
+
+/* ── VARIÁVEIS ─────────────────────────── */
+:root {
+  --ec-green-dark:   #1a5c2e;
+  --ec-green-main:   #2d7d46;
+  --ec-green-mid:    #3a9455;
+  --ec-green-light:  #e8f5ec;
+  --ec-gold:         #f5a623;
+  --ec-text:         #1a2a1f;
+  --ec-muted:        #5a7060;
+  --ec-bg:           #f7faf8;
+  --ec-white:        #ffffff;
+  --ec-border:       #d4e8da;
+  --ec-radius:       14px;
+  --ec-shadow:       0 4px 16px rgba(45,125,70,.10);
+}
+
+/* ── BASE ───────────────────────────────── */
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--ec-bg);
+  color: var(--ec-text);
+}
+
+/* ── NAVBAR ─────────────────────────────── */
+.ec-navbar {
+  background: var(--ec-green-dark);
+  min-height: 64px;
+}
+
+.ec-logo {
+  font-family: 'Sora', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ec-white) !important;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+}
+.ec-dot { color: var(--ec-gold); }
+
+/* ── BOTÕES ─────────────────────────────── */
+.ec-btn-gold {
+  background: var(--ec-gold);
+  color: var(--ec-green-dark);
+  font-weight: 600;
+  font-size: 13px;
+  border-radius: 50px;
+  padding: 8px 20px;
+  border: none;
+  transition: opacity .2s;
+}
+.ec-btn-gold:hover { opacity: .88; color: var(--ec-green-dark); }
+
+.ec-btn-green {
+  background: var(--ec-green-main);
+  color: var(--ec-white);
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 10px 24px;
+  border: none;
+  transition: background .2s, transform .15s;
+}
+.ec-btn-green:hover {
+  background: var(--ec-green-dark);
+  color: var(--ec-white);
+  transform: translateY(-2px);
+}
+
+.ec-btn-outline-white {
+  border: 1.5px solid rgba(255,255,255,.5);
+  color: rgba(255,255,255,.85);
+  border-radius: 50px;
+  font-size: 13px;
+  padding: 6px 16px;
+  transition: all .2s;
+}
+.ec-btn-outline-white:hover {
+  border-color: var(--ec-white);
+  color: var(--ec-white);
+  background: rgba(255,255,255,.08);
+}
+
+/* ── HERO ───────────────────────────────── */
+.ec-hero {
+  background: linear-gradient(135deg, var(--ec-green-dark) 0%, var(--ec-green-main) 60%, var(--ec-green-mid) 100%);
+  padding: 4.5rem 0 5rem;
+}
+
+.ec-badge-gold {
+  background: rgba(245,166,35,.18);
+  border: 1px solid rgba(245,166,35,.4);
+  color: var(--ec-gold);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 20px;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+}
+
+.ec-hero-title {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 700;
+  color: var(--ec-white);
+  line-height: 1.18;
+  margin-bottom: 1rem;
+}
+.ec-em { font-style: normal; color: #5bbf78; }
+
+.ec-hero-desc {
+  font-size: 15px;
+  color: rgba(255,255,255,.72);
+  line-height: 1.75;
+  margin-bottom: 2rem;
+  max-width: 460px;
+}
+
+/* Search */
+.ec-search .input-group {
+  background: var(--ec-white);
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(0,0,0,.22);
+}
+.ec-search .form-control {
+  height: 48px;
+  font-size: 14px;
+}
+.ec-search .input-group-text {
+  border: none;
+  padding-left: 14px;
+}
+
+/* Stats */
+.ec-stat-card {
+  background: rgba(255,255,255,.12);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: var(--ec-radius);
+  padding: 1rem .5rem;
+}
+.ec-stat-card strong {
+  display: block;
+  font-family: 'Sora', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--ec-white);
+}
+.ec-stat-card span {
+  font-size: 11px;
+  color: rgba(255,255,255,.6);
+}
+
+/* ── SEÇÕES ─────────────────────────────── */
+.ec-section { padding: 3.5rem 0; }
+.ec-section--white { background: var(--ec-white); }
+
+.ec-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--ec-green-mid);
+  margin-bottom: 4px;
+}
+.ec-label--light { color: #5bbf78; }
+
+.ec-section-title {
+  font-family: 'Sora', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--ec-text);
+  margin-bottom: 1.8rem;
+}
+.ec-section-title--light { color: var(--ec-white); }
+
+/* ── CATEGORIAS ─────────────────────────── */
+.ec-cat-card {
+  background: var(--ec-white);
+  border: 0.5px solid var(--ec-border);
+  border-radius: var(--ec-radius);
+  padding: 1.2rem .8rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all .2s;
+  user-select: none;
+}
+.ec-cat-card:hover,
+.ec-cat-card.active {
+  border-color: var(--ec-green-main);
+  background: var(--ec-green-light);
+  transform: translateY(-3px);
+  box-shadow: var(--ec-shadow);
+}
+.ec-cat-icon { font-size: 26px; display: block; margin-bottom: 8px; }
+.ec-cat-name { font-size: 12px; font-weight: 500; }
+
+/* ── CARD PROFISSIONAL ───────────────────── */
+.ec-pro-card {
+  border: 0.5px solid var(--ec-border);
+  border-radius: var(--ec-radius);
+  padding: 1.3rem;
+  background: var(--ec-bg);
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  position: relative;
+  transition: all .22s;
+}
+.ec-pro-card:hover {
+  border-color: var(--ec-green-mid);
+  box-shadow: var(--ec-shadow);
+  transform: translateY(-3px);
+  color: inherit;
+}
+
+.ec-pro-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ec-white);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.ec-pro-avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+.ec-pro-name  { font-size: 14px; font-weight: 600; }
+.ec-pro-role  { font-size: 11px; color: var(--ec-muted); }
+.ec-pro-years { font-size: 11px; color: var(--ec-muted); }
+.ec-pro-rating { font-size: 13px; color: var(--ec-gold); letter-spacing: 1px; }
+
+.ec-pro-meta {
+  border-top: 0.5px solid var(--ec-border);
+  margin-top: 12px;
+  padding-top: 12px;
+}
+
+.ec-verified {
+  position: absolute;
+  top: 12px; right: 12px;
+  width: 20px; height: 20px;
+  background: var(--ec-green-main);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: white;
+  font-weight: 700;
+}
+
+/* Filtros */
+.ec-filter-btn {
+  border: 0.5px solid var(--ec-border);
+  background: var(--ec-bg);
+  color: var(--ec-muted);
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 24px;
+  padding: 6px 16px;
+  transition: all .18s;
+}
+.ec-filter-btn.active,
+.ec-filter-btn:hover {
+  background: var(--ec-green-main);
+  color: var(--ec-white);
+  border-color: var(--ec-green-main);
+}
+
+/* ── COMO FUNCIONA ───────────────────────── */
+.ec-how {
+  background: var(--ec-green-dark);
+  padding: 4rem 0;
+}
+.ec-step-card {
+  background: rgba(255,255,255,.06);
+  border: 0.5px solid rgba(255,255,255,.12);
+  border-radius: var(--ec-radius);
+  padding: 1.8rem 1.4rem;
+  position: relative;
+  transition: background .2s;
+  height: 100%;
+}
+.ec-step-card:hover { background: rgba(255,255,255,.1); }
+
+.ec-step-num {
+  font-family: 'Sora', sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: rgba(255,255,255,.07);
+  position: absolute;
+  top: 10px; right: 14px;
+  line-height: 1;
+}
+.ec-step-icon { font-size: 28px; display: block; margin-bottom: 14px; }
+.ec-step-card h3 { font-size: 15px; font-weight: 600; color: var(--ec-white); margin-bottom: 8px; }
+.ec-step-card p  { font-size: 13px; color: rgba(255,255,255,.58); line-height: 1.65; margin: 0; }
+
+/* ── CTA ─────────────────────────────────── */
+.ec-cta {
+  background: var(--ec-green-light);
+  border-top: 0.5px solid var(--ec-border);
+  padding: 3.5rem 0;
+}
+.ec-cta h2 {
+  font-family: 'Sora', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--ec-text);
+  margin-bottom: .5rem;
+}
+.ec-cta p { font-size: 14px; color: var(--ec-muted); margin-bottom: 0; }
+
+/* ── FOOTER ─────────────────────────────── */
+.ec-footer {
+  background: #111c14;
+  padding: 2rem 0;
+}
+.ec-footer .ec-logo { font-size: 18px; }
+.ec-footer-sub { font-size: 12px; color: rgba(255,255,255,.3); }
+.ec-footer-link {
+  font-size: 12px;
+  color: rgba(255,255,255,.45);
+  text-decoration: none;
+  transition: color .2s;
+}
+.ec-footer-link:hover { color: rgba(255,255,255,.85); }
+.ec-footer-copy { font-size: 12px; color: rgba(255,255,255,.2); }
+
+/* ── SPINNER ─────────────────────────────── */
+.ec-spinner { color: var(--ec-green-main); }
+
+/* ── CORES AVATAR ────────────────────────── */
+.av-0 { background: #2d7d46; }
+.av-1 { background: #c0392b; }
+.av-2 { background: #2980b9; }
+.av-3 { background: #8e44ad; }
+.av-4 { background: #e67e22; }
+.av-5 { background: #16a085; }
+.av-6 { background: #d35400; }
+.av-7 { background: #1a5c8a; }
